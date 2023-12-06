@@ -1,5 +1,5 @@
-chmod +x make_html.sh
 name: Java CI with Maven
+
 on:
   push:
     branches: [ "main" ]
@@ -8,11 +8,15 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
+
+      # Créez un script de préparation pour accorder les permissions d'exécution
+      - name: Prepare script
+        run: chmod +x make_html.sh
+
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
