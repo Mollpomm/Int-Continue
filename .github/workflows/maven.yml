@@ -1,5 +1,5 @@
 name: Java CI with Maven
-
+chmod +x make_html.sh
 on:
   push:
     branches: [ "main" ]
